@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Blue Roof Cafe</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+:root{--bg:#f7f3ff;--bg2:#f3eeff;--ink:#1b1535;--card:#fff;--dark:#1b1535;--p:#5b6cff;--pk:#ff7ac8;--mt:#7af0c8;--bt:#ffe36e;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#140f2b;--bg2:#100b24;--ink:#f4f0ff;--card:#221a45}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg2);color:var(--ink);font-family:'Trebuchet MS',system-ui,sans-serif;overflow-x:hidden}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;display:flex;align-items:center;gap:12px;padding:10px 5vw;background:rgba(247,243,255,.88);backdrop-filter:blur(10px);border-bottom:3px solid var(--ink)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) nav{background:rgba(20,15,43,.88)}}
+nav img{width:50px;height:50px;border-radius:50%;animation:wob 4s ease-in-out infinite}
+@keyframes wob{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg) scale(1.06)}}
+nav b{font-size:1.4rem;font-weight:900;background:linear-gradient(90deg,var(--p),var(--pk),var(--p));background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gs 4s linear infinite}
+@keyframes gs{to{background-position:200% center}}
+nav .l{margin-left:auto;display:flex;gap:8px;font:800 .72rem system-ui;letter-spacing:.06em;flex-wrap:wrap}
+nav a{color:var(--ink);text-decoration:none;cursor:pointer;padding:7px 12px;border-radius:20px;transition:transform .2s,background .2s}
+nav a:hover{background:var(--bt);color:#1b1535;transform:translateY(-3px) rotate(-3deg)}nav a.on{background:var(--p);color:#fff}
+.pg{display:none}.pg.on{display:block;animation:pin .5s ease}@keyframes pin{from{opacity:0;transform:translateY(24px)}}
+.land{position:relative;background:linear-gradient(135deg,#ffe3f3,#e4e8ff 50%,#d9fff1);background-size:200% 200%;animation:aur 12s ease infinite;min-height:88vh;overflow:hidden;padding:70px 5vw}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .land{background:linear-gradient(135deg,#2a1450,#14204f 50%,#0f3a3a);background-size:200% 200%}}
+@keyframes aur{0%,100%{background-position:0 50%}50%{background-position:100% 50%}}
+.blob{position:absolute;border-radius:50%;filter:blur(40px);opacity:.55;animation:bl 9s ease-in-out infinite}
+@keyframes bl{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,-30px) scale(1.2)}}
+.land h1{position:relative;font-size:clamp(2.3rem,5.6vw,5rem);line-height:1.04;max-width:12ch;margin:0;font-weight:900}
+.land h1 em{font-style:normal;background:var(--bt);color:#1b1535;padding:0 .12em;border-radius:12px;display:inline-block;transform:rotate(-2deg)}
+.hp{position:absolute;width:min(38vw,300px);bottom:-60px;border-radius:18px;border:3px solid var(--ink);box-shadow:8px 8px 0 var(--ink)}.hp.a{right:18%;transform:rotate(12deg)}.hp.b{right:6%;transform:rotate(-12deg)}
+.cup{position:absolute;left:47%;bottom:2%;width:min(20vw,210px);animation:fl 5s ease-in-out infinite}
+@keyframes fl{0%,100%{transform:rotate(12deg) translateY(0)}50%{transform:rotate(7deg) translateY(-22px)}}
+.stk{position:absolute;font-size:2.4rem;animation:bob 4s ease-in-out infinite}@keyframes bob{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-16px) rotate(10deg)}}
+.mq{background:var(--ink);color:var(--bt);overflow:hidden;white-space:nowrap;border-block:3px solid var(--ink);font:900 1.2rem system-ui;padding:12px 0}
+.mq div{display:inline-block;animation:mq 22s linear infinite}@keyframes mq{to{transform:translateX(-50%)}}.mq span{margin:0 22px}
+.t3{position:relative;overflow:hidden;background:var(--bg);padding:90px 5vw}.row{position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:60px;align-items:center;justify-content:center}
+.sc{perspective:1000px;width:240px;height:240px}.coin{position:relative;width:100%;height:100%;transform-style:preserve-3d;animation:sp 8s linear infinite}
+.fc{position:absolute;inset:0;width:100%;height:100%;border-radius:50%;backface-visibility:hidden;box-shadow:0 20px 40px #0004}.fc.bk{transform:rotateY(180deg)}.ed{position:absolute;inset:0;border-radius:50%;background:var(--p);transform:translateZ(-6px)}
+@keyframes sp{to{transform:rotateY(360deg)}}
+.bean{position:absolute;width:22px;height:34px;border-radius:50%;background:var(--pk);box-shadow:inset -4px -4px 0 #0003;animation:bf 6s ease-in-out infinite}.bean:nth-of-type(even){background:var(--mt)}.bean:nth-of-type(3n){background:var(--bt)}
+.bean:after{content:'';position:absolute;left:50%;top:10%;width:2px;height:80%;background:#1b1535;transform:translateX(-50%) rotate(12deg)}
+@keyframes bf{0%,100%{transform:translateY(0) rotateX(0) rotateZ(0)}50%{transform:translateY(-28px) rotateX(180deg) rotateZ(40deg)}}
+.card{max-width:420px;background:var(--card);border:3px solid var(--ink);border-radius:22px;padding:30px;box-shadow:10px 10px 0 var(--pk);transition:transform .15s ease-out;transform-style:preserve-3d}
+.card h2{font-size:2.1rem;margin:0 0 10px;font-weight:900;transform:translateZ(40px)}.card p{font-size:1.1rem;margin:0;transform:translateZ(20px)}
+.sec{padding:64px 5vw;max-width:1150px;margin:auto}.sec h2.t{font-size:clamp(2rem,6vw,3.6rem);text-align:center;margin:0 0 30px;font-weight:900}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.m{background:var(--card);border:3px solid var(--ink);border-radius:20px;overflow:hidden;box-shadow:6px 6px 0 var(--p);transition:transform .25s,box-shadow .25s}
+.m:nth-child(3n+2){box-shadow:6px 6px 0 var(--pk)}.m:nth-child(3n){box-shadow:6px 6px 0 var(--mt)}
+.m:hover{transform:translate(-4px,-8px) rotate(-1.5deg);box-shadow:12px 14px 0 var(--bt)}
+.m img{width:100%;height:170px;object-fit:cover;display:block;transition:transform .4s}.m:hover img{transform:scale(1.08)}.m div{padding:14px 16px}.m h3{margin:0 0 4px;font-weight:900}.m p{margin:0;font-size:.9rem;opacity:.8}
+.about{background:#1b1535 url(assets/bg.jpg) center/cover;color:#f4f0ff;padding:90px 6vw;text-align:center;position:relative}.about:before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,#1b1535e6,#5b6cffaa)}.about>*{position:relative}
+.about h1{font-size:clamp(2.4rem,9vw,6rem);margin:0 0 20px;color:var(--bt);font-weight:900}.about p{max-width:820px;margin:0 auto 14px;font-size:1.1rem;line-height:1.6}.about span{color:var(--mt);font-weight:900}
+.plan{background:var(--card);border:3px solid var(--ink);border-radius:22px;padding:26px;box-shadow:8px 8px 0 var(--mt);transition:transform .25s}.plan:nth-child(2){box-shadow:8px 8px 0 var(--pk)}.plan:nth-child(3){box-shadow:8px 8px 0 var(--bt)}.plan:hover{transform:translateY(-10px) rotate(1deg)}
+.plan h3{font-size:1.4rem;margin:0 0 10px;font-weight:900}.plan .pr{font-size:1.8rem;font-weight:900;color:var(--p);margin:12px 0}.plan ul{padding-left:18px;line-height:1.7}
+.own{text-align:center;max-width:620px;margin:auto}.own img{width:170px;border-radius:50%;box-shadow:8px 8px 0 var(--pk);border:3px solid var(--ink);animation:wob 5s ease-in-out infinite}.own .card{max-width:none;margin-top:26px}
+.btn{display:inline-block;margin-top:18px;padding:12px 26px;border-radius:30px;background:var(--p);color:#fff;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);text-decoration:none;font:800 .9rem system-ui;transition:transform .15s,box-shadow .15s}.btn:hover{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.rv{font-style:italic}.rv b{display:block;margin-top:10px;font:800 .85rem system-ui;font-style:normal;color:var(--p)}
+.rev{opacity:0;transform:translateY(40px) scale(.97);transition:opacity .7s,transform .7s}.rev.in{opacity:1;transform:none}
+footer{background:var(--ink);color:#f4f0ff;text-align:center;padding:34px 5vw;font:.9rem system-ui;border-top:3px solid var(--p)}footer img{width:68px;border-radius:50%}footer p{margin:6px 0}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rev{opacity:1;transform:none}}
+</style></head><body>
+<nav><img src="assets/logo.png" alt="Blue Roof Cafe logo"><b>Blue Roof Cafe</b><div class="l" id="nav">
+<a href="#home">HOME</a><a href="#events">EVENTS</a><a href="#menu">MENU</a><a href="#boardgames">BOARDGAMES</a><a href="#membership">MEMBERSHIP</a><a href="#about">ABOUT</a><a href="#owner">OWNER</a></div></nav>
+
+<main>
+<div class="pg" id="p-home">
+<header class="land"><span class="blob" style="width:300px;height:300px;background:#ff7ac8;left:-60px;top:20%"></span><span class="blob" style="width:260px;height:260px;background:#7af0c8;right:30%;top:-40px;animation-delay:2s"></span><span class="blob" style="width:220px;height:220px;background:#ffe36e;right:-40px;bottom:10%;animation-delay:4s"></span><span class="stk" style="left:57%;top:16%">☕</span><span class="stk" style="left:60%;top:8%;animation-delay:1s">✨</span><span class="stk" style="left:38%;top:62%;animation-delay:2s">🧋</span><h1>A unique café <em>experience</em> awaits you</h1><img class="hp a" src="assets/hero.jpg" alt=""><img class="hp b" src="assets/hero.jpg" alt=""><img class="cup" src="assets/cup.png" alt=""></header>
+<div class="mq"><div><span>☕ COFFEE</span><span>✦</span><span>🧋 BOBA</span><span>✦</span><span>🎲 BOARD GAMES</span><span>✦</span><span>🥪 GOOD VIBES</span><span>✦</span><span>☕ COFFEE</span><span>✦</span><span>🧋 BOBA</span><span>✦</span><span>🎲 BOARD GAMES</span><span>✦</span><span>🥪 GOOD VIBES</span><span>✦</span><span>☕ COFFEE</span><span>✦</span><span>🧋 BOBA</span><span>✦</span><span>🎲 BOARD GAMES</span><span>✦</span><span>🥪 GOOD VIBES</span><span>✦</span><span>☕ COFFEE</span><span>✦</span><span>🧋 BOBA</span><span>✦</span><span>🎲 BOARD GAMES</span><span>✦</span><span>🥪 GOOD VIBES</span><span>✦</span></div></div>
+<section class="t3"><span class="bean" style="left:8%;top:15%"></span><span class="bean" style="left:20%;top:70%;animation-delay:1s"></span><span class="bean" style="left:85%;top:20%;animation-delay:2s"></span><span class="bean" style="left:75%;top:75%;animation-delay:3s"></span><span class="bean" style="left:50%;top:8%;animation-delay:4s"></span>
+<div class="row"><div class="sc"><div class="coin"><div class="ed"></div><img class="fc" src="assets/logo.png" alt="Blue Roof Cafe logo"><img class="fc bk" src="assets/logo.png" alt=""></div></div>
+<div class="card" id="card"><h2>Welcome to Blue Roof Cafe</h2><p>Great coffee, good food and a warm welcome under our blue roof.</p></div></div></section>
+<section class="sec"><h2 class="t">Today's Special</h2><div class="g" id="sp"></div></section>
+<section class="sec"><h2 class="t">What Our Guests Say</h2><div class="g">
+<div class="m"><div class="rv">★★★★★<br>The Blue Roof Cafe experience has been incredible. Great atmosphere and friendly people!<b>– Arjun Sharma</b></div></div>
+<div class="m"><div class="rv">★★★★★<br>A vibrant place to meet friends, play games and enjoy great coffee.<b>– Priya Desai</b></div></div>
+<div class="m"><div class="rv">★★★★★<br>Wonderful team and a creative, welcoming space. Highly recommended!<b>– Rohan Patel</b></div></div></div></section>
+</div>
+
+<div class="pg" id="p-events"><section class="sec"><h2 class="t">Events</h2><div class="g">
+<div class="m"><img src="assets/ev1.jpg" alt=""><div><h3>Board Game Night</h3><p>Bring friends and play from our library of 300+ games.</p></div></div>
+<div class="m"><img src="assets/ev2.jpg" alt=""><div><h3>Live Music Evening</h3><p>Relax with coffee and live performances.</p></div></div>
+<div class="m"><img src="assets/ev3.jpg" alt=""><div><h3>Game Tournament</h3><p>Compete for prizes in members-only tournaments.</p></div></div>
+<div class="m"><img src="assets/ev4.jpg" alt=""><div><h3>Birthday Parties</h3><p>Celebrate with food, games and discounts.</p></div></div></div></section></div>
+
+<div class="pg" id="p-menu"><section class="sec"><h2 class="t">Discover Blue Roof Cafe</h2><div class="g" id="mn"></div></section></div>
+
+<div class="pg" id="p-boardgames"><section class="sec"><h2 class="t">Board Games</h2><div class="g" id="bgs"></div></section></div>
+
+<div class="pg" id="p-membership"><section class="sec"><h2 class="t">Membership</h2><div class="g">
+<div class="plan"><h3>Foods + Games Membership</h3><ul><li>Access to both the food menu and gaming lounge</li><li>Special discounts on selected food items</li><li>Free gaming credits each month</li><li>Exclusive access to members-only events</li></ul><div class="pr">$50/month</div></div>
+<div class="plan"><h3>Games Only Membership</h3><ul><li>Unlimited access to all games</li><li>Free gaming credits every week</li><li>Invitations to members-only gaming tournaments</li></ul><div class="pr">$30/month</div></div>
+<div class="plan"><h3>Customizable Add-ons</h3><ul><li>Free food on game days</li><li>Extra gaming time</li><li>Birthday party discounts</li></ul><div class="pr">Varies</div></div></div></section></div>
+
+<div class="pg" id="p-about"><div class="about"><h1>ABOUT US</h1>
+<p>How it works.. Our name says it all! Founder and owner, Aarav Mehta, shares a passion for board games, boba, and delicious food, so he combined them all to become Blue Roof Cafe. Come in with your friends and family to play any board game from our library of <span>300+ games!</span> We hope when you visit, you also enjoy our coffee, espresso, boba, sandwiches, and snacks!</p>
+<p><b>Hours and Location</b><br>Sunday: 10am-11pm · Mon-Thurs: 11am-11pm<br>Fri: 11am-midnight · Sat: 10am-midnight<br>Our kitchen closes 2.5-3 hours before we close!</p></div></div>
+
+<div class="pg" id="p-owner"><section class="sec own"><img src="assets/logo.png" alt="Blue Roof Cafe logo"><h2 class="t" style="margin-top:20px">Meet the Owner</h2>
+<div class="card"><h2 style="font-size:2rem">Aarav Mehta</h2><p style="opacity:.7">Founder &amp; Owner, Blue Roof Cafe</p><p style="margin-top:14px">Welcome to Blue Roof Cafe! Come in with friends and family for great coffee, good food and games.</p></div></section></div>
+</main>
+
+<footer><img src="assets/logo.png" alt=""><p><b>Blue Roof Cafe</b></p><p>© 2026 by Blue Roof Cafe. Owned by Aarav Mehta. All rights reserved.</p></footer>
+<script>
+var M=[['espresso','Espresso'],['cappuccino','Cappuccino'],['latte','Latte'],['iced_tea','Iced Tea'],['lemonade','Lemonade'],['mango_smoothie','Mango Smoothie'],['cheese_sandwich','Cheese Sandwich'],['caesar_salad','Caesar Salad'],['pasta_primavera','Pasta Primavera']];
+var B=[['Monopoly','Buy, sell, and trade properties to bankrupt your opponents.'],['Scribble','Create words on a board using letter tiles.'],['Chess','The classic strategy game of kings and queens.'],['Life','Travel the path of life and collect the most wealth.'],['Catan','Trade and build settlements across an island.'],['Ticket to Ride','Build train routes across the map.'],['Pandemic','Work together to stop global outbreaks.'],['Codenames','Give one-word clues to find your agents.']];
+function h(a){return a.map(function(x){return '<div class="m"><img src="assets/'+x[0]+'.jpg" alt=""><div><h3>'+x[1]+'</h3>'+(x[2]?'<p>'+x[2]+'</p>':'')+'</div></div>'}).join('')}
+document.getElementById('sp').innerHTML=h(M.slice(0,3).map(function(x){return [x[0],x[1],'Fresh from our kitchen today.']}));
+document.getElementById('mn').innerHTML=h(M.map(function(x){return [x[0],x[1],'Made fresh at Blue Roof Cafe.']}));
+document.getElementById('bgs').innerHTML=h(B.map(function(x,i){return ['bg'+i,x[0],x[1]]}));
+function route(){var k=(location.hash||'#home').slice(1);if(!document.getElementById('p-'+k))k='home';
+ document.querySelectorAll('.pg').forEach(function(p){p.classList.toggle('on',p.id==='p-'+k)});
+ document.querySelectorAll('#nav a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+k)});window.scrollTo(0,0)}
+window.addEventListener('hashchange',route);route();
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;el.classList.add('in');io.unobserve(el);setTimeout(function(){el.classList.remove('rev','in');el.style.transitionDelay=''},1000)}})},{threshold:.12});
+function rv(){document.querySelectorAll('.m,.plan,.sec h2.t').forEach(function(el,i){if(el.dataset.d)return;el.dataset.d=1;el.classList.add('rev');el.style.transitionDelay=(i%4)*70+'ms';io.observe(el)})}
+rv();window.addEventListener('hashchange',function(){setTimeout(rv,50)});
+var c=document.getElementById('card');
+c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(900px) rotateY('+x*22+'deg) rotateX('+(-y*22)+'deg) scale(1.04)'});
+c.addEventListener('mouseleave',function(){c.style.transform='none'});
+</script></body></html>
